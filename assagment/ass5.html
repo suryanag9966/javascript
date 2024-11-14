@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Submission Form</title>
+    <style>
+        /* Basic container styling */
+        .form-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Styling for labels and inputs */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        /* Submit button styling */
+        input[type="submit"] {
+            background-color: black;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            width: 30%;
+        }
+
+
+        /* Basic form layout for rows */
+        .form-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h2 style="text-align: left">Paper Submission</h2>
+    <hr />
+    <form action="#" method="post" enctype="multipart/form-data">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="First"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Last"
+                    required
+                />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    required
+                />
+            </div>
+
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="email">Student E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="john.doe@example.com"
+                    required
+                />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="student-id">Student ID</label>
+                <input
+                    type="text"
+                    id="student-id"
+                    name="student-id"
+                    required
+                />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="paper-title">Paper Title</label>
+                <input
+                    type="text"
+                    id="paper-title"
+                    name="paper-title"
+                    required
+                />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea
+                    id="description"
+                    name="description"
+                    rows="4"
+                    required
+                ></textarea>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="file-upload">Upload Files</label>
+                <input
+                    type="file"
+                    id="file-upload"
+                    name="file-upload"
+                    required
+                />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <input
+                    type="submit"
+                    value="Submit"
+                />
+            </div>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>
+

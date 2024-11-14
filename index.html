@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inline-Block Page Layout</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header, nav, footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+section {
+    display: flex;
+    flex: 1;
+}
+
+.main-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.article, .main-content {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    flex: 1;
+}
+
+aside {
+    flex: 1;
+    background-color: #dcdcdc;
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+}
+
+footer {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>Header</header>
+    <nav>Menu bar</nav>
+    <section>
+        <div class="main-section">
+            <div class="article">section</div>
+            <div class="main-content">main content</div>
+        </div>
+        <aside>side content</aside>
+    </section>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>

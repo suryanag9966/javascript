@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body,html{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1{
+          position: absolute;
+          top: 6px;
+          left: 15px;
+          
+        }
+
+        .conatiner{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           background-color: lightgrey;
+           border: 2px solid black;
+           padding: 20px;
+           width: 70vw;
+           max-width: 100%;
+           max-height: 90%;
+           position: relative;
+        }
+
+       .btn{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        display: flex;
+        gap:5px;
+       }
+
+       #sub,#res{
+        padding:10px;
+       }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <div class="conatiner">
+        <form id="Registration Form">
+            <label for="name">First name:</label>
+            <br/>
+            <input type="text" id="name" placeholder="firstname" size="10">
+            <br/>
+            <br/>
+            <label for="lname">Lastname:</label>
+            <br/>
+            <input type="text" id="lname" placeholder="Lastname" size="10" maxlength="10">
+            <br/>
+            <br/>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" id="email" placeholder="exmaple@.com">
+            <br/>
+            <br/>
+            <label for="password">password:</label>
+            <br/>
+            <input type="password" id="password" placeholder="password" required>
+            <br/>
+            <br/>
+            <label for="dob">Date of Brith:</label>
+            <br/>
+            <input type="date" name="dob" id="dob">
+            <br/>
+            <br/>
+            <label for="country">country:</label>
+            <br/>
+            <select name="" id="country">
+                <option value="india">india</option>
+                <option value="usa">usa</option>
+                <option value="uk">uk</option>
+                <option value="germany">germany</option>
+                <option value="ireland">ireland</option>
+                <option value="others">others</option>
+            </select>
+            <br/>
+            <br/>
+            <label for="Gender">Gender</label>
+            <br/>
+            <label for="male">male
+            <input type="radio" name="male" id="male">
+            </label>
+            <label for="female">female
+                <input type="radio" name="female" id="female">
+            </label>
+            <label for="others">others
+                <input type="radio" name="others" id="others">
+            </label>
+            <br/>
+            <br>
+            <br>
+            <label for="phone">phone
+                <input type="text" id="phone" size="10" maxlength="10">
+            </label>
+            <br>
+            <br>
+            <br>
+            <label for="email2">Email</label>
+            <input type="email" name="" id="email2">
+            <br/>
+            <br>
+            <br>
+            <input type="checkbox" name="" id="">
+            by singing up to you agree to our trems of service and privacy policy
+            <br>
+            <br>
+            <br>
+            <div class="btn">
+            <button id="sub">submit</button>
+            <button id="res">reset</button>
+            </div>
+        </form>
+        <div id="welcome" style="display: none; margin-top: 20px;">Welcome! Registration complete</div>
+    </div>
+    <script>
+        document.getElementById("sub")
+        .addEventListener("click", (event)=>{
+            event.preventDefault();
+            alert("Form submitted successfully!");
+            document.getElementById("welcome").style.display="block";
+    
+        });
+    
+        document.getElementById("res")
+        .addEventListener("click",()=>{
+            document.getElementById("Registration Form").reset();
+    
+        })
+    </script>
+</body>
+</html>

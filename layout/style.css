@@ -1,0 +1,61 @@
+*{margin: 0;
+ padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "navbar navbar"
+    "sidebar main"
+    "sidebar footer";
+}
+
+nav{
+    grid-area: navbar;
+    background-color: bisque;
+    padding: 1em;
+    position: sticky;
+    top: 0;
+}
+
+
+aside{
+    grid-area:sidebar;
+    background-color: aquamarine;
+    position: sticky;
+    top: 50px;
+    align-self: start;
+    height: calc(100vh - 50px);
+    
+}
+
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+    background-color: rgb(92, 92, 198);
+    color: white;
+}
+
+#sidebar{
+    display: none;/* Hidden by default */
+}
+
+#sidebar.active{
+    display: block;/* Shows when active class is added */
+}
+
+@media (max-width:800px){
+    body{
+        grid-template-columns: 1fr;
+    }
+    aside{
+        position: fixed;
+        width: 300px;
+    }
+}

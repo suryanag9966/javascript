@@ -1,0 +1,27 @@
+:root{
+    --div-bg-color: red;
+    --text-color: blue;
+    --pading-left:35%;
+    --body-bg-color:grey;
+
+}
+
+body{
+    background-color: var(--body-bg-color);
+}
+
+.container{
+    background-color: var(--div-bg-color);
+    color: var(--text-color);
+}
+
+.box2{
+    --div-bg-color: darkblue;
+    --text-color:white;
+}
+.container h1{
+    padding-left: var(--pading-left);
+    font-family: var(--font,"cursive");
+
+
+}
